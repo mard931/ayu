@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Message Card -->
+            <div class="card rounded-xl p-6 mb-8">
+                <h2 class="title-font text-2xl text-pink-600 mb-4">Maafkan Aku</h2>
+                <textarea id="messageText" class="w-full h-40 p-4 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 mb-4" placeholder="Tuliskan permintaan maafmu disini...">Aku ingin meminta maaf atas semua kesalahan yang telah aku perbuat. Aku sayang padamu dan akan berusaha menjadi lebih baik.</textarea>
+                <button id="saveMessage" class="btn-primary text-white px-6 py-3 rounded-lg w-full">Simpan Pesan</button>
+            </div>
+=======
+            <!-- Buttons -->
+            <div id="buttonsContainer" class="card rounded-xl p-6 mb-8 text-center">
+                <button id="forgiveBtn" class="btn-primary text-white px-6 py-3 rounded-lg mx-2" onclick="showThanks()">Maafkan</button>
+                <button id="rejectBtn" class="bg-gray-200 text-gray-700 px-6 py-3 rounded-lg mx-2 hover:bg-gray-300 transition-all" onclick="moveButton()">Tidak mau</button>
+            </div>
+            <div id="thanksMessage" class="text-center text-xl text-pink-600 hidden mb-4">
+                Terimakasih
+            </div>
+<<<<<< SEARCH
+    </script>
+=======
+        function moveButton() {
+            const btn = document.getElementById('rejectBtn');
+            const randomX = Math.random() * 200 - 100;
+            const randomY = Math.random() * 200 - 100;
+            btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+
+        function showThanks() {
+            document.getElementById('thanksMessage').classList.remove('hidden');
+            document.getElementById('buttonsContainer').classList.add('hidden');
+        }
+    </script>
+</head>
+</html>
