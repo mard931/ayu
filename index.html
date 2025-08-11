@@ -44,6 +44,15 @@
         font-weight: bold;
         display: none;
     }
+    .sticker {
+        margin-top: 30px;
+        width: 150px;
+        animation: goyang 1s infinite alternate;
+    }
+    @keyframes goyang {
+        from { transform: rotate(-5deg); }
+        to { transform: rotate(5deg); }
+    }
 </style>
 </head>
 <body>
@@ -56,6 +65,9 @@ tapi percayalah aku sayang kamu.</p>
 <button id="tidakMau">Tidak Mau</button>
 
 <div id="terimakasih">Terimakasih ❤️</div>
+
+<!-- Sticker lucu -->
+<img src="https://i.ibb.co/6B7R9mK/cute-bear.png" alt="Sticker Lucu" class="sticker">
 
 <script>
     const maafkanBtn = document.getElementById('maafkan');
