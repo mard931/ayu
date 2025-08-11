@@ -1,99 +1,103 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Untuk Ayu</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffe6e6;
-    margin: 0;
-    padding: 50px;
-  }
-  h1 {
-    color: #d6336c;
-  }
-  p {
-    font-size: 18px;
-    color: #333;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  #maafkan {
-    background-color: #4CAF50;
-    color: white;
-  }
-  #tidakMau {
-    background-color: #f44336;
-    color: white;
-    position: relative;
-  }
-  #terimakasih {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #008000;
-    font-weight: bold;
-    display: none;
-  }
-  .sticker {
-    margin-top: 30px;
-    width: 150px;
-    animation: goyang 1s infinite alternate;
-  }
-  @keyframes goyang {
-    from {
-      transform: rotate(-5deg);
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        background: linear-gradient(135deg, #fff5f7, #ffeef3);
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    to {
-      transform: rotate(5deg);
+    .container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+        max-width: 400px;
     }
-  }
+    h1 {
+        color: #e75480;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 15px;
+        margin: 8px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    #maafkan {
+        background-color: #ff88a5;
+        color: white;
+    }
+    #maafkan:hover {
+        background-color: #ff6d91;
+        transform: scale(1.05);
+    }
+    #tidakMau {
+        background-color: #ccc;
+        color: #333;
+        position: relative;
+    }
+    #tidakMau:hover {
+        background-color: #bbb;
+    }
+    #terimakasih {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #4CAF50;
+        font-weight: bold;
+        display: none;
+    }
 </style>
 </head>
 <body>
-  <h1>Untuk Ayu</h1>
-  <p>
-    Mungkin kata maaf saja tidak cukup menghilangkan rasa kesalmu,<br />
-    tapi percayalah aku sayang kamu.
-  </p>
 
-  <button id="maafkan">Maafkan</button>
-  <button id="tidakMau">Tidak Mau</button>
+<div class="container">
+    <h1>Untuk Ayu</h1>
+    <p>Mungkin kata maaf saja tidak cukup menghilangkan rasa kesalmu,<br>
+    tapi percayalah aku sayang kamu.</p>
 
-  <div id="terimakasih">Terimakasih ❤️</div>
+    <button id="maafkan">Maafkan</button>
+    <button id="tidakMau">Tidak Mau</button>
 
-  <!-- Sticker lucu -->
-  <img
-    src="https://media.giphy.com/media/3o6ZsWQq7khUn6cgoY/giphy.gif"
-    alt="Sticker Lucu"
-    class="sticker"
-  />
+    <div id="terimakasih">Terimakasih ❤️</div>
+</div>
 
-  <script>
-    const maafkanBtn = document.getElementById("maafkan");
-    const tidakMauBtn = document.getElementById("tidakMau");
-    const terimakasihText = document.getElementById("terimakasih");
+<script>
+    const maafkanBtn = document.getElementById('maafkan');
+    const tidakMauBtn = document.getElementById('tidakMau');
+    const terimakasihText = document.getElementById('terimakasih');
 
-    maafkanBtn.addEventListener("click", () => {
-      terimakasihText.style.display = "block";
+    maafkanBtn.addEventListener('click', () => {
+        terimakasihText.style.display = 'block';
     });
 
-    tidakMauBtn.addEventListener("click", () => {
-      let x = Math.floor(Math.random() * (window.innerWidth - 100));
-      let y = Math.floor(Math.random() * (window.innerHeight - 100));
-      tidakMauBtn.style.position = "absolute";
-      tidakMauBtn.style.left = x + "px";
-      tidakMauBtn.style.top = y + "px";
+    tidakMauBtn.addEventListener('click', () => {
+        let x = Math.floor(Math.random() * (window.innerWidth - 120));
+        let y = Math.floor(Math.random() * (window.innerHeight - 50));
+        tidakMauBtn.style.position = 'absolute';
+        tidakMauBtn.style.left = x + 'px';
+        tidakMauBtn.style.top = y + 'px';
     });
-  </script>
+</script>
+
 </body>
 </html>
